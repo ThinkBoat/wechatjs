@@ -1,16 +1,17 @@
-export class BaseWeChatApi {
-    private client
+import { BaseWeChatClient } from ".."
 
-    constructor(client?) {
+export class BaseWeChatApi {
+    private client: BaseWeChatClient
+
+    constructor(client?: BaseWeChatClient) {
         this.client = client
     }
 
-    protected get(url, ...args) {
-        return this.client.get(url, ...args)
+    protected get(url: string, params?: Record<string, unknown>) {
+        return this.client.get(url, params)
     }
 
-    protected post(url, ...args) {
-        return this.client.post(url, ...args)
+    protected post(url: string, data?: Record<string, unknown>) {
+        return this.client.post(url, data)
     }
-
 }

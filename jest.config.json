@@ -1,0 +1,9 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "testPathIgnorePatterns": ["<rootDir>/test/fixtures", "<rootDir>/lib/"],
+  "coveragePathIgnorePatterns": ["<rootDir>/test/"]
+}
